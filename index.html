@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <link rel="stylesheet" href="src/index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="section1">
+      <div class="logo_section">
+        <div class="boxer">
+          <div class="img-box">
+            <img
+              width="100px"
+              height="100px"
+              class="l-icon"
+              src="src/images/noun-map-106497 (1).svg"
+              alt=""
+            />
+          </div>
+          <h2>P-map</h2>
+        </div>
+        <form class="form_box form_row_hidden">
+          <div class="form_row">
+            <label for="type">Dataset</label>
+            <select name="Type" id="form_select" class="form_type">
+              <option value="running">Running</option>
+              <option value="cycling">Cycling</option>
+            </select>
+          </div>
+          <div class="form_row">
+            <label for="distance">Distance</label>
+            <input type="text" class="distance" placeholder="Km" />
+          </div>
+          <div class="form_row">
+            <label for="duration">Duration</label>
+            <input type="text" class="duration" placeholder="Min" />
+          </div>
+          <div class="form_row form_cadence">
+            <label for="cadence">Cadence</label>
+            <input type="text" class="cadence" placeholder="Step/Min" />
+          </div>
+          <div class="form_row form_elevgain form_row_hidden">
+            <label for="elevgain" class="elevgains">Elev Gain</label>
+            <input type="text" class="elevgain" placeholder="meters" />
+          </div>
+          <button class="form_btn">okay</button>
+        </form>
+        <div class="activity_box"></div>
+      </div>
+      <div id="map"></div>
+    </div>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="src/index.js"></script>
+  </body>
+</html>
